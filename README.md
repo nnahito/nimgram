@@ -11,6 +11,8 @@ ngram.nimが本体です。
 import ngram
 
 let sample1 = nGram("今日はいい天気", 2)
+for i in sample1:
+    echo(i)
 ```
 
 ↓
@@ -23,3 +25,25 @@ let sample1 = nGram("今日はいい天気", 2)
 い天
 天気
 ```
+
+---
+
+
+```nim
+import ngram
+
+let sample1 = nGram("今日はいい天気", 3)
+for i in sample1:
+    echo(i)
+```
+
+↓
+
+```
+今日は
+日はい
+はいい
+いい天
+い天気
+```
+
