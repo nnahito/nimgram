@@ -1,4 +1,5 @@
 import ngram
+import nre
 
 let sample1 = nGram("今日はいい天気", 2)
 
@@ -15,7 +16,7 @@ let sample2 = nGram("""
 9700円+9700円+9700円で、29100円。
 3人分の300円で900円。29100円+300円=30000円。
 さて、フロントマンのポケットの100円はどこから出てきたでしょうか。
-""", 5)
+""".replace(re"[\n|\r|\t|\s]", ""), 5)
 
 for i in sample2:
     echo(i)
