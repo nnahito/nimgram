@@ -1,13 +1,13 @@
 import ngram
 import nre
 
-let sample1 = nGram("今日はいい天気", 2)
+let sample1 = createCorpus("今日はいい天気", 2)
 
 for i in sample1:
     echo(i)
 
 
-let sample2 = nGram("""
+let sample2 = createCorpus("""
 一泊一部屋3万円のホテル、3人で泊まると3万円。
 フロントマンが3万円を受け取ったところ、支配人が1000円割引してやれという。
 しかし1000円は3人では割り切れない。
@@ -21,3 +21,5 @@ let sample2 = nGram("""
 for i in sample2:
     echo(i)
     
+
+echo cosineSimilarity("渋谷はどこですか", "渋谷はどこですか", 2)
